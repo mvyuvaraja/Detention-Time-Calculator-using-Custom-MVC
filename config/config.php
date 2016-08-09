@@ -7,7 +7,7 @@ define ('DEVELOPMENT_ENVIRONMENT', true);
 // Database connection 
 define('DB_HOST', 'localhost'); 
 define('DB_USER', 'root'); 
-define('DB_PASSWORD', 'Systemx3100M4!(^&23275'); 
+define('DB_PASSWORD', '123423275'); 
 define('DB_NAME', 'test'); 
 
 // Website URL and path 
