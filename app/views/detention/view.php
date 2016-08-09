@@ -42,7 +42,7 @@
     <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add', plain:true" id="btnAdd">Add New</a>
 </div>
 
-<div id="dlg" class="easyui-dialog" title="Add / Edit - Detention" data-options="iconCls:'icon-save',closed:true" style="width:350px;height:400px;padding:10px 10px;">
+<div id="dlg" class="easyui-dialog" title="Add / Edit - Detention" data-options="iconCls:'icon-save',closed:true" style="width:350px;height:350px;padding:10px 10px;">
     
     <form action="" id="frm" >
         <input type="hidden" id="id" value="">
@@ -61,15 +61,7 @@
                 <option value="<?php echo $offense_type['id'] ;?>"><?php echo $offense_type['name'] ;?></option>
                 <?php } ?>
             </select>
-        </div>  
-        
-        <div style="margin-bottom:20px">
-            <select id="time_type" name="time_type" class="easyui-combobox" label="Time type:" style="width:100%;" required>
-                <option value="Default" selected>Default</option>
-                <option value="Good">Good</option>
-                <option value="Bad">Bad</option>
-            </select>
-        </div>
+        </div> 
         
         <div style="margin-bottom:20px">
             <select id="calc_mode" name="calc_mode" class="easyui-combobox" label="Calc mode:" style="width:100%" required>
@@ -106,14 +98,12 @@ $(function () {
                 student_name = aData[1],
                 roll_no = aData[2],
                 offense_id = aData[3],
-                time_type = aData[6],
                 calc_mode = aData[7];
                 
                 $('#id').val(id);
                 $('#student_name').textbox({'value': student_name});
                 $('#roll_no').numberbox({'value': roll_no});
                 $('#offense_id').combobox({'value': offense_id});
-                $('#time_type').combobox({'value': time_type});
                 $('#calc_mode').combobox({'value': calc_mode});
                 
                 $('#dlg').dialog('setTitle', 'Edit - Detention');

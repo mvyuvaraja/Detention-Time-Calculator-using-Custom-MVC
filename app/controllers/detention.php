@@ -24,8 +24,8 @@ class detention extends Controller {
         $data['student_name'] = htmlspecialchars(trim($_POST['student_name']), ENT_QUOTES);
         $data['roll_no'] = !empty($_POST['roll_no']) ? $_POST['roll_no'] : 0;
         $data['offense_id'] = !empty($_POST['offense_id']) ? $_POST['offense_id'] : 0;
-        $data['time_type'] = !empty($_POST['time_type']) ? $_POST['time_type'] : 'Default';
         $data['calc_mode'] = !empty($_POST['calc_mode']) ? $_POST['calc_mode'] : 'Concurrent';
+        $data['time_type'] = 'Good';
                     
         if($id){
             //Edit
@@ -36,6 +36,9 @@ class detention extends Controller {
                 $msg = ['type'=>'error', 'text'=>'Student detention not updated.'];
         }else{
             //Add
+            if($this->get_model('DetentionModel')->checkExists($data['roll_no'])){
+                $data['time_type'] = 'Bad';
+            }
             $res = $this->get_model('DetentionModel')->insert($data);
             if($res)
                 $msg = ['type'=>'success', 'text'=>'Student detention inserted.'];

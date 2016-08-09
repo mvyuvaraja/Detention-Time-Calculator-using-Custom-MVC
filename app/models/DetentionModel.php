@@ -27,6 +27,11 @@ class DetentionModel extends Model {
 		return $this->db->delete('detentions') ? 1 : 0;        
 	}
 	
+	public function checkExists($roll_no) {
+        $this->db->where("roll_no", $roll_no);
+		return $this->db->getOne('detentions') ? 1: 0;        
+	}
+	
 	public function getStudents() {
         $cols = Array("roll_no", "student_name");
         $this->db->groupBy("roll_no");
