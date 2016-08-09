@@ -1,0 +1,16 @@
+#msg {display:block; position:absolute; z-index:999999; margin:-10px 0px 0px -50px;}
+#msgcontent {
+
+/*background: #FF0000;*/
+vertical-align:middle;
+color:#FFFFFF;
+background:url(speach-bubble.gif) no-repeat;
+width:193px;
+height:38px;
+padding:5px 3px 0px 10px;
+font-family: tahoma;
+font-size: 11px;
+
+}/* CSS Document */
+
+

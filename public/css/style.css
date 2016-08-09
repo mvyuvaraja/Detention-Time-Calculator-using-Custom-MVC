@@ -1,0 +1,23 @@
+/*.header{heigh: 50px; text-align: center; font-size: 24px; font-weight: bold; color: #008808; border-bottom: 2px solid black;}
+.footer{position: fixed; bottom:0; left:0; height: 30px; width:100%; text-align: center; font-size: 10px; background: #efefef; color: #998808; border-top: 1px solid black;}
+.main{height: 600px; margin:0; padding: 0;}
+.menu{width:15%; height: inherit; background: #efefef; color: #903409;float: left; }
+.content{width: 84%; height: inherit; float: left; overflow: auto; border-left: 1px dotted #000;}*/
+
+.cl-menu{margin:0; padding:0;}
+.cl-menu li{margin:0; padding:10px; border-bottom: 1px dotted #ccc; list-style: none;}
+.cl-menu li:hover, .cl-menu li.active{background: #f9f68e; color: #880000  ; cursor: pointer;}
+.cl-menu li:hover a, .cl-menu li.active a{color: #880000;}
+.cl-menu li a{text-decoration: none;}
+.page_title{padding:0 5px; text-decoration: underline;}
+
+.phead{text-align: center; font-size: 24px; font-weight: bold; color: #008808; margin: 0; padding:0;}
+.toolbar{float: left; margin-right: 50px; }
+.report-table{border-collapse: collapse; width:80%;}
+.report-table th{font-weight: bold;}
+.report-table th, .report-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.report-table thead tr{background: #4CAF50; color: #FFF;}
